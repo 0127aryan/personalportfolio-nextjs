@@ -34,7 +34,7 @@ const RecentProjects = () => {
                         <div className='flex items-center justify-betweenmt-7 mb-3'>
                             <div className='flex items-center'>
                                 {iconLists.map((icon, index) => (
-                                    <div key={icon} className='border border-white/[0.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center' style={{ transform: `translateX(-${5 * index * 2} px)`}}>
+                                    <div key={icon} className='border border-white/[0.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center' style={{ transform: `translateX(-${5 * index + 2}px)`}}>
                                         <img src={icon} alt={icon} className='p-2' />
                                     </div>
                                 ))}
