@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { cn } from "@/utils/cn";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
@@ -203,6 +204,7 @@ const ShaderMaterial = ({
     }
     lastFrameTime = timestamp;
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const material: any = ref.current.material;
     const timeLocation = material.uniforms.u_time;
     timeLocation.value = timestamp;
@@ -279,7 +281,8 @@ const ShaderMaterial = ({
     });
 
     return materialObject;
-  }, [size.width, size.height, source]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [size.width, size.height, source,]);
 
   return (
     <mesh ref={ref as any}>

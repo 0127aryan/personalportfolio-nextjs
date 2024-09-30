@@ -3,7 +3,6 @@ import React from "react";
 import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
 import { socialMedia } from "@/data";
-import { link } from "fs";
 
 const Footer = () => {
   return (
