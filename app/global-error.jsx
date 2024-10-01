@@ -10,9 +10,10 @@ export default function GlobalError({ error }) {
   }, [error]);
 
   return (
-    <div>
-      
+    <html>
+      <body suppressHydrationWarning={true}>      
         <Error />
-    </div>
+        </body>
+    </html>
   );
 }
