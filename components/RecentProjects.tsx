@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import { projects } from '@/data'
+
 import { PinContainer } from './ui/3d-pin'
 import { FaLocationArrow } from 'react-icons/fa'
 
@@ -14,6 +15,7 @@ const RecentProjects = () => {
         <div className='flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10'>
             {projects.map(({ id, title,des,img,link,iconLists}) => (
                 <div key={id} className='sm:h-[41rem] lg:min-h-[32.5rem] h-[32rem] flex items-center justify-center sm:w-[570px] w-[80vw]'>
+                    {/* <Suspense fallback={<div>Loading...</div>}> */}
                     <PinContainer title={link} href={link}>
                         <div className='relative flex items-center justify-center sm:w-[570px] sm:h-[40vh] w-[80vw] overflow-hidden h-[30vh] mb-10'>
                             <div className='relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]'>
@@ -47,6 +49,7 @@ const RecentProjects = () => {
 
                         </div>
                     </PinContainer>
+                    {/* </ Suspense> */}
                 </div>
             ))}
 
